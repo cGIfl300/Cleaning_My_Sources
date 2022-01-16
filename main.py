@@ -30,8 +30,8 @@ list_directories = list(dict.fromkeys(list_directories))
 
 print("Checking paths to delete...")
 for this_dir in list_directories:
-    if this_dir[len(this_dir) - 5:] == "\\venv" or this_dir[
-                                                   len(this_dir) - 6:] == "\\.idea":
+    if this_dir[len(this_dir) - 5:] == "\\venv" \
+            or this_dir[len(this_dir) - 6:] == "\\.idea":
         print(f"Deleting {this_dir}")
         # Doesn't work on Windows
         # shutil.rmtree(dir, ignore_errors=True)
